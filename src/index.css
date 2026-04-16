@@ -1,0 +1,388 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap");
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* Paleta Arena & Agua */
+  --petroleo: #0891B2;
+  --oceano: #155E75;
+  --ambar: #FBBF24;
+  --marfil: #FDF8F0;
+  --espresso: #1C1917;
+
+  /* Roles semánticos */
+  --text: #44403C;
+  --text-h: var(--espresso);
+  --bg: var(--marfil);
+  --bg-white: #FFFFFF;
+  --bg-dark: var(--oceano);
+  --bg-cta: var(--petroleo);
+  --accent: var(--ambar);
+  --border: #E7E5E4;
+  --border-accent: rgba(8, 145, 178, 0.2);
+  --shadow:
+    rgba(28, 25, 23, 0.06) 0 10px 15px -3px,
+    rgba(28, 25, 23, 0.03) 0 4px 6px -2px;
+  --shadow-lg:
+    rgba(28, 25, 23, 0.08) 0 20px 25px -5px,
+    rgba(28, 25, 23, 0.04) 0 10px 10px -5px;
+
+  /* Tipografía */
+  --heading: "Outfit", system-ui, sans-serif;
+  --sans: "DM Sans", system-ui, sans-serif;
+
+  font: 16px/160% var(--sans);
+  color-scheme: light;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
+}
+
+/* ---- Reset ---- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---- Layout ---- */
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 1120px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-inline: 24px;
+
+  @media (max-width: 768px) {
+    padding-inline: 16px;
+  }
+}
+
+section {
+  padding-block: 96px;
+
+  @media (max-width: 768px) {
+    padding-block: 64px;
+  }
+}
+
+/* ---- Tipografía ---- */
+h1, h2, h3 {
+  font-family: var(--heading);
+  color: var(--text-h);
+  margin: 0;
+}
+
+h1 {
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 115%;
+  letter-spacing: -1.5px;
+
+  @media (max-width: 768px) {
+    font-size: 34px;
+    letter-spacing: -0.8px;
+  }
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -0.8px;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+    letter-spacing: -0.4px;
+  }
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: -0.2px;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+p {
+  margin: 0;
+  line-height: 165%;
+}
+
+.subtitle {
+  font-size: 19px;
+  line-height: 165%;
+  color: var(--text);
+
+  @media (max-width: 768px) {
+    font-size: 17px;
+  }
+}
+
+/* ---- Botones ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  padding: 14px 32px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--petroleo);
+  color: #FFFFFF;
+
+  &:hover {
+    background: var(--oceano);
+    box-shadow: var(--shadow);
+  }
+}
+
+.btn-accent {
+  background: var(--ambar);
+  color: var(--espresso);
+
+  &:hover {
+    background: #E5AB1E;
+    box-shadow: var(--shadow);
+  }
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--petroleo);
+  border: 1.5px solid var(--petroleo);
+
+  &:hover {
+    background: rgba(8, 145, 178, 0.06);
+  }
+}
+
+/* ---- Secciones con fondo ---- */
+.bg-marfil {
+  background: var(--marfil);
+}
+
+.bg-white {
+  background: var(--bg-white);
+}
+
+.bg-oceano {
+  background: var(--oceano);
+  color: rgba(255, 255, 255, 0.85);
+
+  & h1, & h2, & h3 {
+    color: #FFFFFF;
+  }
+
+  & .subtitle {
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.bg-petroleo {
+  background: var(--petroleo);
+  color: rgba(255, 255, 255, 0.85);
+
+  & h1, & h2, & h3 {
+    color: #FFFFFF;
+  }
+}
+
+.bg-espresso {
+  background: var(--espresso);
+  color: rgba(255, 255, 255, 0.6);
+
+  & h1, & h2, & h3 {
+    color: #FFFFFF;
+  }
+}
+
+/* ---- Métricas ---- */
+.metric-number {
+  font-family: var(--heading);
+  font-weight: 500;
+  font-size: 44px;
+  letter-spacing: -1px;
+  color: var(--petroleo);
+  line-height: 1;
+
+  @media (max-width: 768px) {
+    font-size: 34px;
+  }
+}
+
+.metric-label {
+  font-size: 15px;
+  color: var(--text);
+  margin-top: 4px;
+}
+
+/* ---- Tarjetas ---- */
+.card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+  transition: box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: var(--shadow);
+  }
+}
+
+/* ---- Formulario ---- */
+.form-input {
+  width: 100%;
+  font-family: var(--sans);
+  font-size: 16px;
+  padding: 12px 16px;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  outline: none;
+  transition: border-color 0.2s ease;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.45);
+  }
+
+  &:focus {
+    border-color: var(--ambar);
+  }
+}
+
+.form-input-light {
+  background: var(--bg-white);
+  border-color: var(--border);
+  color: var(--espresso);
+
+  &::placeholder {
+    color: #A8A29E;
+  }
+
+  &:focus {
+    border-color: var(--petroleo);
+  }
+}
+
+.form-select {
+  appearance: none;
+  width: 100%;
+  font-family: var(--sans);
+  font-size: 16px;
+  padding: 12px 16px;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  cursor: pointer;
+  outline: none;
+
+  &:focus {
+    border-color: var(--ambar);
+  }
+}
+
+/* ---- Texto legal ---- */
+.legal {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 150%;
+}
+
+.legal-dark {
+  color: var(--text);
+  opacity: 0.6;
+}
+
+/* ---- Utilidades ---- */
+.text-petroleo {
+  color: var(--petroleo);
+}
+
+.text-ambar {
+  color: var(--ambar);
+}
+
+.text-espresso {
+  color: var(--espresso);
+}
+
+.text-white {
+  color: #FFFFFF;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-heading {
+  font-family: var(--heading);
+}
+
+.font-body {
+  font-family: var(--sans);
+}
+
+/* ---- Wordmark ---- */
+.wordmark {
+  font-family: var(--heading);
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: lowercase;
+}
+
+/* Placeholders del form CTA sobre fondo petróleo */
+#demo input::placeholder,
+#demo select::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#demo select option {
+  background: var(--petroleo);
+  color: #fff;
+}
