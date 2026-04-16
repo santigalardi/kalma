@@ -1,13 +1,88 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>kalma</title>
+
+    <!-- Primary SEO -->
+    <title>kalma — Gestión de turnos automática por WhatsApp</title>
+    <meta name="description" content="kalma automatiza la reserva, confirmación, recordatorio y cancelación de turnos por WhatsApp. Sin intervención humana. Ideal para clínicas, estética, gastronomía y más." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://kalma.com.ar/" />
+
+    <!-- Open Graph (redes sociales y WhatsApp) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kalma.com.ar/" />
+    <meta property="og:title" content="kalma — Gestión de turnos automática por WhatsApp" />
+    <meta property="og:description" content="kalma automatiza la reserva, confirmación, recordatorio y cancelación de turnos por WhatsApp. Sin intervención humana." />
+    <meta property="og:image" content="https://kalma.com.ar/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:site_name" content="kalma" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="kalma — Gestión de turnos automática por WhatsApp" />
+    <meta name="twitter:description" content="kalma automatiza la reserva, confirmación, recordatorio y cancelación de turnos por WhatsApp. Sin intervención humana." />
+    <meta name="twitter:image" content="https://kalma.com.ar/og-image.png" />
+
+    <!-- Schema — SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "kalma",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web, WhatsApp",
+      "description": "Asistente de turnos automatizado que gestiona reservas, confirmaciones, recordatorios y cancelaciones por WhatsApp sin intervención humana.",
+      "url": "https://kalma.com.ar",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "ARS",
+        "description": "Demo gratuita disponible"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PrestoBots",
+        "url": "https://kalma.com.ar",
+        "email": "hola@kalma.com.ar"
+      }
+    }
+    </script>
+
+    <!-- Schema — Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "kalma by PrestoBots",
+      "url": "https://kalma.com.ar",
+      "logo": "https://kalma.com.ar/android-chrome-512x512.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "hola@kalma.com.ar",
+        "availableLanguage": "Spanish"
+      }
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- HubSpot Tracking Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js-na2.hs-scripts.com/245737220.js"></script>
   </body>
 </html>
