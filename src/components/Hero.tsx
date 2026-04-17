@@ -229,7 +229,7 @@ export default function Hero() {
       <style>{`
         @media (max-width: 768px) {
           .hero-section {
-            padding-top: 96px !important;
+            padding-top: 128px !important;
             padding-bottom: 64px !important;
             min-height: unset !important;
           }
