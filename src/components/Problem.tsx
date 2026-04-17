@@ -92,9 +92,9 @@ export default function Problem() {
                 background: 'rgba(255,255,255,0.15)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 fontSize: '18px',
-              }}>💼</div>
+              }}>👤</div>
               <div>
-                <p style={{ color: '#fff', fontSize: '15px', fontWeight: 600, margin: 0 }}>Mi Negocio</p>
+                <p style={{ color: '#fff', fontSize: '15px', fontWeight: 600, margin: 0 }}>Laura M.</p>
                 <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '12px', margin: 0 }}>en línea</p>
               </div>
               <div style={{ marginLeft: 'auto', display: 'flex', gap: '4px' }}>
